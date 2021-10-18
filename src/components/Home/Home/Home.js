@@ -9,7 +9,6 @@ import Quote from '../Quote/Quote';
 const Home = () => {
   return (
     <div>
-      <Menubar></Menubar>
       <Hero></Hero>
       <Services></Services>
       <Quote></Quote>
