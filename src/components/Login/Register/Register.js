@@ -17,7 +17,7 @@ const Register = () => {
   const history = useHistory();
   
 
-  const { createNewUser, user, error, setUser , updateUserName, logOutUser, setError } = useAuth();
+  const { createNewUser,  error, setUser , updateUserName, logOutUser, setError } = useAuth();
 
   // registration process function 
   const processRegistration = () => {

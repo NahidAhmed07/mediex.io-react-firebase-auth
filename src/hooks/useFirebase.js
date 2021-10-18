@@ -12,19 +12,15 @@ import {
 } from "firebase/auth";
 
 
-
 initializeFirebase();
 
 const useFirebase = () => {
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
-
   const [user, setUser] = useState({})
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   
-
-
 
   // google sign in function 
   const googleSignIn = () => {
@@ -39,7 +35,6 @@ const useFirebase = () => {
       if (user) {
         setUser(user)
         setIsLoading(false)
-
       }
       else {
         setUser({})
@@ -54,7 +49,6 @@ const useFirebase = () => {
     signOut(auth).then(() => setUser({}))
   }
 
-
   // Create a new user  with email and password 
   const createNewUser = (email, password) => {
    return createUserWithEmailAndPassword(auth, email, password)
@@ -62,7 +56,6 @@ const useFirebase = () => {
   }
 
   // add user display name 
-
   const updateUserName = (name) => {
     updateProfile(auth.currentUser, {
       displayName: name
@@ -70,7 +63,7 @@ const useFirebase = () => {
       .catch(err => setError(err.message));
   }
 
-
+  // login with email and password 
   const loginWithEmail = (email, password) => {
     return signInWithEmailAndPassword(auth,email, password )
   }
@@ -87,8 +80,5 @@ const useFirebase = () => {
     loginWithEmail,
   };
 }
-
-
-
 
 export default useFirebase;

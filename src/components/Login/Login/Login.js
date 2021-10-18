@@ -16,7 +16,7 @@ const Login = () => {
   const [email, setEmail]= useState("")
   
 
-  const { googleSignIn, user, loginWithEmail , setError, setUser, error} = useAuth();
+  const { googleSignIn,  loginWithEmail , setError, setUser, error} = useAuth();
 
   // process login function 
   const processLogin = () => {

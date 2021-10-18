@@ -8,6 +8,8 @@ import Menubar from './components/Shared/Menubar/Menubar';
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import serviceDetails from './components/serviceDetails/serviceDetails';
 
 
 function App() {
@@ -29,6 +31,9 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
+            <PrivateRoute path="/serviceDetails">
+              <serviceDetails></serviceDetails>
+            </PrivateRoute>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>
