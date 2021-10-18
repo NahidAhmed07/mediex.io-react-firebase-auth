@@ -15,13 +15,24 @@ const Services = () => {
   }, [])
   
   return (
-    <Container className="my-5">
-      <h2 className="header-text display-5 fw-bold pt-5">OUR SERVICES</h2>
-      <Row xs={1} md={2} lg={3} xl={4} className="py-5 text-start mx-auto g-4">
-        {services.map((service) => (
-          <Service service={service} key={service.id}></Service>
-        ))}
-      </Row>
+    <Container fluid>
+      <Container className="my-5">
+        <h2 className="header-text display-5 fst-italic fw-bold pt-5">
+          OUR SERVICES
+        </h2>
+        <hr />
+        <Row
+          xs={1}
+          md={2}
+          lg={3}
+          xl={4}
+          className="py-5 text-start mx-auto g-4"
+        >
+          {services.map((service) => (
+            <Service service={service} key={service.id}></Service>
+          ))}
+        </Row>
+      </Container>
     </Container>
   );
 };

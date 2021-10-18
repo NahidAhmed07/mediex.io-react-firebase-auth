@@ -9,7 +9,7 @@ const Service = ({service}) => {
       <Card className="h-100 service-cart shadow-lg p-2" style={{ width: "18rem" }}>
         <Card.Img variant="top" style={{ height: "230px" }} src={img} />
         <Card.Body>
-          <h5 className="mt-3">{title}</h5>
+          <h5 className="mt-3 fst-italic ">{title}</h5>
           <Card.Text className="text-muted">{description.slice(0, 70)}...</Card.Text>
         </Card.Body>
         <Card.Footer>
