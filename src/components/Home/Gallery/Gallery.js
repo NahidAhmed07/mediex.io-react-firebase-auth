@@ -26,7 +26,7 @@ const Gallery = () => {
         <Col xs={12} md={6} lg={4}>
           <div className="position-relative">
             <img
-              className="img-fluid"
+              className="img-fluid gallery-img"
               width="100%"
               src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/gallery-1.jpg"
               alt=""
@@ -41,9 +41,9 @@ const Gallery = () => {
         <Col xs={12} md={6} lg={4}>
           <div className="position-relative">
             <img
-              className="img-fluid"
+              className="img-fluid gallery-img"
               width="100%"
-              style={{height:315}}
+              style={{ height: 315 }}
               src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/gallery-2.jpg"
               alt=""
             />
@@ -58,7 +58,7 @@ const Gallery = () => {
           <div className="position-relative">
             <img
               width="100%"
-              className="img-fluid"
+              className="img-fluid gallery-img"
               src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/gallery-3.jpg"
               alt=""
             />
@@ -73,7 +73,7 @@ const Gallery = () => {
           <div className="position-relative">
             <img
               width="100%"
-              className="img-fluid"
+              className="img-fluid gallery-img"
               src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/gallery-4.jpg"
               alt=""
             />
@@ -88,7 +88,7 @@ const Gallery = () => {
           <div className="position-relative">
             <img
               width="100%"
-              className="img-fluid"
+              className="img-fluid gallery-img"
               src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/gallery-5.jpg"
               alt=""
             />
