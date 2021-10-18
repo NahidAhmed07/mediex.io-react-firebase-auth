@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap"
 import './Footer.css';
 import { NavLink } from "react-router-dom"
 import {FaRegCalendarAlt} from "react-icons/fa"
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { footerImages } from '../../../utilities/utilities';
 
 const Footer = () => {
   return (
@@ -100,34 +102,28 @@ const Footer = () => {
             <hr />
             <br />
 
-            <div>
-              <img
-                src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/portfolio-2-150x150.jpg"
-                alt=""
-              />
-              <img
-                src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/portfolio-1-150x150.jpg"
-                alt=""
-              />
-              <img
-                src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/portfolio-3-150x150.jpg"
-                alt=""
-              />
-              <img
-                src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/portfolio-4-150x150.jpg"
-                alt=""
-              />
-              <img
-                src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/portfolio-8-150x150.jpg"
-                alt=""
-              />
-              <img
-                src="https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/portfolio-6-150x150.jpg"
-                alt=""
-              />
-            </div>
+            <Row xs={2} md={3} className="g-3">
+              {footerImages.map((img) => (
+                <Col key={img.slice(0.2)}>
+                  <img src={img} className="img-fluid" alt="footer img" />
+                </Col>
+              ))}
+            </Row>
           </Col>
         </Row>
+
+        <br />
+        <br />
+        <hr />
+        <p className="text-center">
+          <a href="#hero">
+            <MdOutlineKeyboardArrowUp className="up-icon" />
+          </a>
+        </p>
+
+        <p className="text-center">
+          Copyright © 2020 TeamRejected. Rights Reserved.
+        </p>
       </Container>
     </Container>
   );

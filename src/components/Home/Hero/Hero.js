@@ -18,6 +18,7 @@ const Hero = () => {
     <div
       className="hero-banner container-fluid text-white"
       style={heroBannerStyle}
+      id="hero"
     >
       <Container className="h-100">
         <Row className="h-100">

@@ -18,7 +18,7 @@ const OurDoctor = () => {
     <Container>
       
       <h2 className="header-text display-5 fst-italic fw-bold pt-5">OUR DOCTOR</h2><hr />
-      <Row className="py-5">
+      <Row className="py-5 g-4">
         {
           doctors.map(doctor => <Doctor
             key={doctor.id}

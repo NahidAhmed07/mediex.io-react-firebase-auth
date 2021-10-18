@@ -4,6 +4,7 @@ import Services from '../../Services/Services';
 import Menubar from '../../Shared/Menubar/Menubar';
 import Gallery from '../Gallery/Gallery';
 import Hero from '../Hero/Hero';
+import Pricing from '../Pricing/Pricing';
 import Quote from '../Quote/Quote';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Quote></Quote>
       <OurDoctor></OurDoctor>
       <Gallery></Gallery>
+      <Pricing></Pricing>
     </div>
   );
 };

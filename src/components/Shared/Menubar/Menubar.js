@@ -58,9 +58,11 @@ const Menubar = () => {
           {/* navbar icons  */}
         </Nav>
         <div className="d-flex ms-auto my-4 my-md-0">
-          <div>
-            <button className="hero-btn btn-fill">Log out</button>
-          </div>
+          <NavLink to="/login">
+            <button  className="hero-btn btn-fill">
+              Log out
+            </button>
+          </NavLink>
           <div>
             <button className="hero-btn btn-fill">Sign up</button>
           </div>
