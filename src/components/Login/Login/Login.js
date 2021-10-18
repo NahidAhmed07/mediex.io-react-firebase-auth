@@ -5,18 +5,50 @@ import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import googleImg from "../../../images/login/google.png"
 import githubImg from "../../../images/login/github.png";
-import facebookImg from "../../../images/login/facebook.png"
-import useFirebase from "../../../hooks/useFirebase";
+import useAuth from "../../../hooks/useAuth";
+import { emptyInputField } from "../../../utilities/utilities";
 
 const Login = () => {
 
   const [success, setSuccess] = useState("");
   const [showState, setShowState] = useState(false);
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail]= useState("")
+  
 
-  const { googleSignIn, user } = useFirebase();
-  console.log(user);
+  const { googleSignIn, user, loginWithEmail , setError, setUser, error} = useAuth();
+
+  // process login function 
+  const processLogin = () => {
+    loginWithEmail(email, password)
+      .then(result => {
+        setUser(result.user);
+        setError("");
+        emptyInputField();
+      }).catch(err => {
+        if (err.message.includes("user-not-found")) {
+          setError("Invalid Email and Password");
+        }
+    })
+  }
+
+// handle login submit 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    processLogin();
+  }
+
+// email validation function 
+  const handleEmil = (e) => {
+    const emailRegex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+    if (!emailRegex.test(e.target.value)) {
+      setError("Invalid Email Address");
+    } else {
+      setError(" ");
+      setEmail(e.target.value);
+    }
+  };
+  
   
   return (
     <div className="auth-home">
@@ -30,16 +62,20 @@ const Login = () => {
               <div className="icon-parent">
                 <img
                   onClick={googleSignIn}
-                  className="img-icon" src={googleImg} alt="" />
+                  className="img-icon"
+                  src={googleImg}
+                  alt=""
+                />
                 <img className="img-icon" src={githubImg} alt="" />
-                <img className="img-icon" src={facebookImg} alt="" />
               </div>
-              <Form>
+              <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="validationCustomUsername">
                   <p className="text-center text-success">
                     <span className="text-white">he</span>
                     {success}{" "}
-                    {success.length > 1 && <i className="far fa-check-circle"></i>}
+                    {success.length > 1 && (
+                      <i className="far fa-check-circle"></i>
+                    )}
                   </p>
                   <Form.Label>Your Email</Form.Label>
                   <InputGroup hasValidation>
@@ -47,7 +83,9 @@ const Login = () => {
                       <i className="far fa-envelope-open text-primary"></i>
                     </InputGroup.Text>
                     <Form.Control
+                      onBlur={handleEmil}
                       className="input-field"
+                      id="login-email"
                       type="email"
                       placeholder="Enter your name"
                       aria-describedby="inputGroupPrepend"
@@ -64,6 +102,7 @@ const Login = () => {
                     </InputGroup.Text>
                     <Form.Control
                       className="input-field"
+                      id="login-password"
                       onBlur={(e) => setPassword(e.target.value)}
                       type={showState ? "text" : "password"}
                       placeholder="Enter your password"

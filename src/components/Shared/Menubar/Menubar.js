@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 import "./Menubar.css";
 import { Nav, Navbar } from "react-bootstrap";
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 import { RiHospitalLine } from "react-icons/ri";
 import logo from "../../../images/download.webp";
+import useAuth from "../../../hooks/useAuth";
 
 const Menubar = () => {
+  const { logOutUser, user } = useAuth();
+  console.log(user);
   return (
     <Navbar
       className="container-fluid sticky-top bg-white px-5 py-0 navbar"
@@ -39,14 +42,14 @@ const Menubar = () => {
             activeClassName="active-nav-item"
             to="/about"
           >
-            ABOUT US
+            ABOUT
           </NavLink>
           <NavLink
             className="nav-item"
             activeClassName="active-nav-item"
             to="/contact"
           >
-            CONTACT US
+            CONTACT
           </NavLink>
           <NavLink
             className="nav-item d-md-none "
@@ -57,15 +60,15 @@ const Menubar = () => {
           </NavLink>
           {/* navbar icons  */}
         </Nav>
-        <div className="d-flex ms-auto my-4 my-md-0">
-          <NavLink to="/login">
-            <button  className="hero-btn btn-fill">
-              Log out
-            </button>
-          </NavLink>
-          <div>
-            <button className="hero-btn btn-fill">Sign up</button>
-          </div>
+        <div className="d-flex align-items-center ms-auto my-4 my-md-0">
+          <h6 className="me-3 fw-bold">{user.displayName}</h6>
+          {!user.email ? (
+            <NavLink to="/login">
+              <button className="hero-btn btn-fill">Login</button>
+            </NavLink>
+          ) : (
+            <button onClick={logOutUser} className="hero-btn btn-fill">Log out</button>
+          )}
         </div>
       </Navbar.Collapse>
     </Navbar>

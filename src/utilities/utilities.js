@@ -10,4 +10,14 @@ const footerImages = [
   "https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/portfolio-6-150x150.jpg",
 ]
 
-export { imageArray, footerImages };
+const emptyInputField = () => {
+
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("login-password").value = "";
+  document.getElementById("login-email").value = "";
+
+}
+
+export { imageArray, footerImages, emptyInputField };
