@@ -1,0 +1,13 @@
+
+
+.quote{
+  background-image: url("https://i.ibb.co/4Z9cg80/slider1.jpg");
+  font-family: 'Montserrat', sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-color: #1b292ed5;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  color:white;
+  
+}
