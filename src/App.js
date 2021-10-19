@@ -1,16 +1,15 @@
-
-import './App.css';
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from './components/Home/Home/Home';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Footer from './components/Shared/Footer/Footer';
-import Menubar from './components/Shared/Menubar/Menubar';
-import Login from './components/Login/Login/Login';
-import Register from './components/Login/Register/Register';
-import AuthProvider from './context/AuthProvider';
-import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
-import serviceDetails from './components/serviceDetails/serviceDetails';
-
+import Home from "./components/Home/Home/Home";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Footer from "./components/Shared/Footer/Footer";
+import Menubar from "./components/Shared/Menubar/Menubar";
+import Login from "./components/Login/Login/Login";
+import Register from "./components/Login/Register/Register";
+import AuthProvider from "./context/AuthProvider";
+import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
+import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
+import DoctorDetails from "./components/DoctorDetails/DoctorDetails";
 
 function App() {
   return (
@@ -22,7 +21,7 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route  path="/home">
+            <Route path="/home">
               <Home></Home>
             </Route>
             <Route path="/login">
@@ -31,8 +30,12 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <PrivateRoute path="/serviceDetails">
-              <serviceDetails></serviceDetails>
+            <Route path="/doctorDetails">
+              <DoctorDetails></DoctorDetails>
+            </Route>
+
+            <PrivateRoute path="/serviceDetails/:serviceId">
+              <ServiceDetails></ServiceDetails>
             </PrivateRoute>
           </Switch>
           <Footer></Footer>

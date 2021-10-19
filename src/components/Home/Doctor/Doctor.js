@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const Doctor = ({ doctor }) => {
   const { img, name, description, post, id } = doctor;
@@ -18,7 +19,9 @@ const Doctor = ({ doctor }) => {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <button className="hero-btn btn-unfill">Details</button>
+          <NavLink to="/doctorDetails">
+            <button className="hero-btn btn-unfill">Details</button>
+          </NavLink>
         </Card.Footer>
       </Card>
     </Col>

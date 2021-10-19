@@ -5,21 +5,31 @@ import { NavLink } from "react-router-dom";
 import googleImg from "../../../images/login/google.png";
 import githubImg from "../../../images/login/github.png";
 import useAuth from "../../../hooks/useAuth";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import { emptyInputField } from "../../../utilities/utilities";
 
 const Register = () => {
-
   const [showState, setShowState] = useState(false);
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const history = useHistory();
-  
+  const location = useLocation();
 
-  const { createNewUser,  error, setUser , updateUserName, logOutUser, setError } = useAuth();
+  const redirect_uri = location?.state?.from || "/";
+  const {
+    createNewUser,
+    error,
+    setUser,
+    updateUserName,
+    logOutUser,
+    setError,
+    googleSignIn,
+    setIsLoading,
+    githubSignIn,
+  } = useAuth();
 
-  // registration process function 
+  // registration process function
   const processRegistration = () => {
     setError("");
     createNewUser(email, password, name)
@@ -27,19 +37,18 @@ const Register = () => {
         setUser(result.user);
         updateUserName(name);
         logOutUser();
-        history.push('/login')
+        history.push("/login");
         setError("");
-        emptyInputField()
+        emptyInputField();
       })
       .catch((err) => {
         if (err.message.includes("email-already-in-use")) {
           setError("This Email already Registered");
         }
       });
-  }
-  
+  };
 
-  // validate email address 
+  // validate email address
   const handleEmil = (e) => {
     const emailRegex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
     if (!emailRegex.test(e.target.value)) {
@@ -50,7 +59,7 @@ const Register = () => {
     }
   };
 
-  //  validate input password 
+  //  validate input password
   const handleRegistration = (e) => {
     e.preventDefault();
     if (password.length < 6) {
@@ -71,8 +80,42 @@ const Register = () => {
     } else {
       processRegistration();
     }
+  };
 
-  }
+  // handle Google sign in function 
+  const handleGoogleSignIn = () => {
+    setIsLoading(true);
+    googleSignIn()
+      .then((result) => {
+        setUser(result.user);
+        setIsLoading(false);
+        setError("");
+        history.push(redirect_uri);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+  // Handle Github sign fucntion
+  const handleGithubSignIn = () => {
+    githubSignIn()
+      .then((result) => {
+        setUser(result.user);
+        setError("");
+        history.push(redirect_uri);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
   return (
     <div className="auth-home">
       <Container>
@@ -85,9 +128,20 @@ const Register = () => {
               <br />
               <p className="text-center">Or Sign Using </p>
               <div className="icon-parent">
-                <img className="img-icon" src={googleImg} alt="" />
-                <img className="img-icon" src={githubImg} alt="" />
+                <img
+                  onClick={handleGoogleSignIn}
+                  className="img-icon"
+                  src={googleImg}
+                  alt=""
+                />
+                <img
+                  onClick={handleGithubSignIn}
+                  className="img-icon"
+                  src={githubImg}
+                  alt=""
+                />
               </div>
+              <br />
               <Form onSubmit={handleRegistration}>
                 <Form.Group controlId="validationCustomUsername">
                   <Form.Label>Your Name</Form.Label>

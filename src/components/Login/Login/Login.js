@@ -9,36 +9,83 @@ import useAuth from "../../../hooks/useAuth";
 import { emptyInputField } from "../../../utilities/utilities";
 
 const Login = () => {
-
-  const [success, setSuccess] = useState("");
   const [showState, setShowState] = useState(false);
   const [password, setPassword] = useState("");
-  const [email, setEmail]= useState("")
-  
+  const [email, setEmail] = useState("");
+  const location = useLocation();
+  const history = useHistory();
 
-  const { googleSignIn,  loginWithEmail , setError, setUser, error} = useAuth();
+  const redirect_uri = location?.state?.from || "/";
+  const {
+    googleSignIn,
+    loginWithEmail,
+    setError,
+    setUser,
+    error,
+    setIsLoading,
+    githubSignIn,
+  } = useAuth();
 
-  // process login function 
+  // handle google signIn function
+  const handleGoogleSignIn = () => {
+    setIsLoading(true);
+    googleSignIn()
+      .then((result) => {
+        setUser(result.user);
+        setError("");
+        history.push(redirect_uri);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+
+  // Handle Github sign fucntion 
+  const handleGithubSignIn = () => {
+    githubSignIn()
+      .then((result) => {
+        setUser(result.user);
+        setError("");
+        history.push(redirect_uri);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }
+  // process login function
   const processLogin = () => {
+    setIsLoading(true);
     loginWithEmail(email, password)
-      .then(result => {
+      .then((result) => {
         setUser(result.user);
         setError("");
         emptyInputField();
-      }).catch(err => {
+        history.push(redirect_uri);
+      })
+      .catch((err) => {
         if (err.message.includes("user-not-found")) {
           setError("Invalid Email and Password");
         }
-    })
-  }
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
 
-// handle login submit 
+  // handle login submit
   const handleSubmit = (e) => {
     e.preventDefault();
     processLogin();
-  }
+  };
 
-// email validation function 
+  // email validation function
   const handleEmil = (e) => {
     const emailRegex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
     if (!emailRegex.test(e.target.value)) {
@@ -48,8 +95,7 @@ const Login = () => {
       setEmail(e.target.value);
     }
   };
-  
-  
+
   return (
     <div className="auth-home">
       <Container>
@@ -57,26 +103,26 @@ const Login = () => {
           <Col xs={12} md={6} lg={6} xl={5} className="mx-auto">
             <div className="login-container p-5 my-5 rounded-1 ">
               <h2 className="font-monospace fw-bold text-center">Login</h2>
+              <hr />
               <br />
               <p className="text-center">Or Sign Using </p>
               <div className="icon-parent">
                 <img
-                  onClick={googleSignIn}
+                  onClick={handleGoogleSignIn}
                   className="img-icon"
                   src={googleImg}
                   alt=""
                 />
-                <img className="img-icon" src={githubImg} alt="" />
+                <img
+                  onClick={handleGithubSignIn}
+                  className="img-icon"
+                  src={githubImg}
+                  alt=""
+                />
               </div>
+              <br />
               <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="validationCustomUsername">
-                  <p className="text-center text-success">
-                    <span className="text-white">he</span>
-                    {success}{" "}
-                    {success.length > 1 && (
-                      <i className="far fa-check-circle"></i>
-                    )}
-                  </p>
                   <Form.Label>Your Email</Form.Label>
                   <InputGroup hasValidation>
                     <InputGroup.Text id="inputGroupPrepen">

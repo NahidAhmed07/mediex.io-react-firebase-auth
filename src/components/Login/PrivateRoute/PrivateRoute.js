@@ -3,11 +3,21 @@ import { Redirect, Route } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
-  const { user } = useAuth();
+  const { user, isLoading } = useAuth();
+  if (isLoading) {
+    return (
+      <div className="my-5">
+        <div class="spinner-border text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Route
       {...rest}
-      render={({ location }) => user.email ? (
+      render={({ location }) => user.displayName ? (
         children
       ) : (
           <Redirect
@@ -24,4 +34,4 @@ const PrivateRoute = ({ children, ...rest }) => {
   );
 };
 
-export default PrivateRoute;<h1>Private Route</h1>
+export default PrivateRoute;
