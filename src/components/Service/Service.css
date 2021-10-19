@@ -1,12 +1,10 @@
-
-.service-cart{
+.service-cart {
   padding: 10px;
 }
 
-.animate-img{
+.animate-img {
   transition: 0.5s;
 }
-.animate-img:hover{
-   transform: scale(1.1);
-
+.animate-img:hover {
+  transform: scale(1.1);
 }

@@ -1,22 +1,20 @@
-
-
 .about {
   background-image: url("https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/form-bg-1.jpg");
   min-height: 50vh;
   background-position: center;
   background-size: cover;
-  background-color:rgba(0, 0, 0, 0.514);
+  background-color: rgba(0, 0, 0, 0.514);
   background-blend-mode: overlay;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-img1{
+.about-img1 {
   transition: 0.4s;
 }
 
-.text-overlay:hover .about-img1{
+.text-overlay:hover .about-img1 {
   transform: scale(1.1);
 }
 
@@ -24,17 +22,16 @@
   cursor: pointer;
 }
 
-
-.contact-img{
-    border: 1px solid blueviolet;
-    padding: 10px;
-    margin-bottom: 10px;
+.contact-img {
+  border: 1px solid blueviolet;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-.submit-btn{
-    background-color:#07eeb6 ;
-    padding: 5px 15px;
-    border: none;
-    color: white;
-    font-weight: 600;
-    border-radius: 5px;
+.submit-btn {
+  background-color: #07eeb6;
+  padding: 5px 15px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
 }

@@ -1,6 +1,4 @@
-
-
-.page404{
+.page404 {
   background-image: url("https://freefrontend.com/assets/img/html-css-404-page-templates/HTML-404-Page-Animated.png?fbclid=IwAR0IS3lfgsOOHw_VnXx4645MezfeNMdEdfEAQpslEotAX_-RZZ4mdtGevuo");
   height: 100vh;
   background-position: center;
@@ -8,6 +6,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }

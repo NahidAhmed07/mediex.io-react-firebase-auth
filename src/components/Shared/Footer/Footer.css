@@ -1,80 +1,84 @@
-
-
-.footer{
+.footer {
   background: #223645;
   color: white;
 }
 
-
-.useful-links{
+.useful-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   row-gap: 10px;
-  color: rgb(211, 210, 210);
+  
   padding: 0;
 }
 
-.useful-links li{
+.useful-links li {
   list-style: none;
   transition: all 0.4s ease;
   cursor: pointer;
 }
+.useful-links li a{
+  transition: 0.3s;
+}
+.useful-links li a:hover{
+  color: #0094ca;
+}
 
-.useful-links li:hover{
+.useful-links li a{
+  text-decoration: none;
+  color: rgb(211, 210, 210);
+}
+
+.useful-links li:hover {
   color: white;
   padding-left: 5px;
 }
 
-.circle-img{
+.circle-img {
   width: 70px;
   height: 70px;
   border-radius: 100%;
   outline: 2px solid rgb(202, 202, 202);
   outline-offset: 5px;
   transition: 0.4s;
-
 }
-.post-item{
+.post-item {
   transition: 0.4s;
 }
 
-.post-item:hover .circle-img{
-  outline-color: #04AFEF;
-
+.post-item:hover .circle-img {
+  outline-color: #04afef;
 }
 
-.post-item h6{
+.post-item h6 {
   transition: 0.4s;
 }
-.post-item:hover h6{
-  color: #04AFEF;
-
+.post-item:hover h6 {
+  color: #04afef;
 }
 
-.footerGallery{
+.footerGallery {
   display: grid;
-  grid-template-columns: repeat(3 , 1fr);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 15px;
   column-gap: 8px;
 }
 
-.up-icon{
+.up-icon {
   position: relative;
   bottom: 40px;
   font-size: 30px;
-  font-weight: lighter ;
+  font-weight: lighter;
   color: white;
   border-radius: 100%;
-  background: #04AFEF;
+  background: #04afef;
   display: inline-block;
   width: 50px;
   height: 50px;
   cursor: pointer;
   transition: 0.4s;
-
 }
 
-.up-icon:hover{
+.up-icon:hover {
   background: #0094ca;
 }

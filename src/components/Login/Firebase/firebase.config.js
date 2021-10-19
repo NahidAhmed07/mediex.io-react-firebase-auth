@@ -1,4 +1,4 @@
- const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyBrHtkhYJYpOXt3Yr8w1QYmxLlnF8WPkag",
   authDomain: "mediex-assignment-10.firebaseapp.com",
   projectId: "mediex-assignment-10",

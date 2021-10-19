@@ -17,32 +17,34 @@ const Footer = () => {
             <hr />
             <br />
             <ul className="useful-links">
-              <li as={NavLink} to="/home">
-                &#62; Main Home
+              <li>
+                <NavLink to="/home#home">&#62; Main Home</NavLink>
               </li>
-              <li as={NavLink} to="/">
-                &#62; Setting &amp; Privacy
+              <li>
+                <NavLink to="/"> &#62; Setting &amp; Privacy</NavLink>
               </li>
-              <li as={NavLink} to="/">
-                &#62; Appointment
+              <li>
+                <NavLink to="/appointment#appointment">
+                  &#62; Appointment
+                </NavLink>
               </li>
-              <li as={NavLink} to="/">
-                &#62; Faq
+              <li>
+                <NavLink to="/">&#62; Faq</NavLink>
               </li>
-              <li as={NavLink} to="/">
-                &#62; About us
+              <li>
+                <NavLink to="/about#about">&#62; About us</NavLink>
               </li>
-              <li as={NavLink} to="/">
-                &#62; Latest News
+              <li>
+                <NavLink to="/">&#62; Latest News</NavLink>
               </li>
-              <li as={NavLink} to="/">
-                &#62; Contact us
+              <li>
+                <NavLink to="/appointment">&#62; Contact us</NavLink>
               </li>
-              <li as={NavLink} to="/">
-                &#62; Doctors Details
+              <li>
+                <NavLink to="/">&#62; Doctors Details</NavLink>
               </li>
-              <li as={NavLink} to="/">
-                &#62; Careers
+              <li>
+                <NavLink to="/login#login">&#62; Login</NavLink>
               </li>
             </ul>
           </Col>

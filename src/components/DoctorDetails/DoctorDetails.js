@@ -9,7 +9,6 @@ const DoctorDetails = () => {
   const [doctor, setDoctor] = useState({});
   const history = useHistory();
 
-
   console.log(doctorId);
 
   useEffect(() => {
@@ -24,7 +23,6 @@ const DoctorDetails = () => {
         }
       });
   }, []);
-
 
   return (
     <Container fluid id="doctor-details" className="pt-5">

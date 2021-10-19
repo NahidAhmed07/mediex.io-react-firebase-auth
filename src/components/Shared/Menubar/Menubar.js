@@ -4,14 +4,14 @@ import { Nav, Navbar } from "react-bootstrap";
 import logo from "../../../images/logo.png";
 import useAuth from "../../../hooks/useAuth";
 import { HashLink } from "react-router-hash-link";
+import userImg from "../../../images/login/avater2.png";
 
 const Menubar = () => {
+  const { logOutUser, user } = useAuth();
 
-  const { logOutUser, user } = useAuth(); 
-  
   return (
     <Navbar
-      id='navbar'
+      id="navbar"
       className="container-fluid sticky-top bg-white px-5 py-0 navbar"
       variant="light"
       expand="lg"
@@ -23,37 +23,30 @@ const Menubar = () => {
       <Navbar.Collapse id="navbarScroll">
         <Nav className="mx-auto my-2 my-lg-0" navbarScroll>
           {/* Nav Rout link  */}
-          <HashLink
-            className="nav-item"
-            to="/home#home"
-          >
+          <HashLink className="nav-item" to="/home#home">
             Home
           </HashLink>
 
-          <HashLink
-            className="nav-item"
-            to="/home#service"
-          >
+          <HashLink className="nav-item" to="/home#service">
             Services
           </HashLink>
-          <HashLink
-            className="nav-item"
-            to="/appointment#appointment"
-          >
+          <HashLink className="nav-item" to="/appointment#appointment">
             Appointment
           </HashLink>
-          <HashLink
-            className="nav-item"
-            to="/about#about"
-          >
+          <HashLink className="nav-item" to="/about#about">
             About
           </HashLink>
-          
         </Nav>
         <div className="d-flex align-items-center ms-auto my-4 my-md-0 nav-login">
+          <img
+            width="35px"
+            height="35px"
+            className="rounded-circle me-2"
+            src={user.photoURL || userImg}
+            alt=""
+          />
           <h6 className="me-3 mt-1 fw-bold">{user.displayName}</h6>
 
-          
           {/* login and logout toggle render  */}
           {!user.displayName ? (
             <HashLink to="/login#login">

@@ -1,5 +1,4 @@
-
-.text-overlay{
+.text-overlay {
   position: absolute;
   background: rgba(53, 53, 53, 0.616);
   top: 0;
@@ -9,19 +8,19 @@
   bottom: 0;
   transition: 0.4s;
 }
-.text-overlay:hover{
+.text-overlay:hover {
   opacity: 1;
 }
 
-.text-overlay div{
+.text-overlay div {
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
-  color:white;
+  color: white;
 }
 
 .text-overlay .icon {
-  font-size:50px;
+  font-size: 50px;
   cursor: pointer;
 }

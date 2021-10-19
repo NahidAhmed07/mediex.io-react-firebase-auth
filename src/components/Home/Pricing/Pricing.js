@@ -1,9 +1,8 @@
-import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import React from "react";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { AiOutlineGold, AiOutlineInsertRowBelow } from "react-icons/ai";
 import { SiSmartthings } from "react-icons/si";
-import "./Pricing.css"
-
+import "./Pricing.css";
 
 const Pricing = () => {
   return (

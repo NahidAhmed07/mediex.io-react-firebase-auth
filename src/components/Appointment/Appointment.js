@@ -1,6 +1,6 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import "./Appointment.css"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import "./Appointment.css";
 
 const Appointment = () => {
   return (

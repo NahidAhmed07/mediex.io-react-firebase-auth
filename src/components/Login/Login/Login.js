@@ -3,10 +3,9 @@ import "./Login.css";
 import { useState } from "react";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import { useLocation, useHistory } from "react-router-dom";
-import googleImg from "../../../images/login/google.png"
+import googleImg from "../../../images/login/google.png";
 import githubImg from "../../../images/login/github.png";
 import useAuth from "../../../hooks/useAuth";
-import { emptyInputField } from "../../../utilities/utilities";
 import { HashLink } from "react-router-hash-link";
 
 const Login = () => {
@@ -30,13 +29,12 @@ const Login = () => {
 
   // handle google signIn function
   const handleGoogleSignIn = () => {
-    
     setIsLoading(true);
     googleSignIn()
       .then((result) => {
         setUser(result.user);
         setError("");
-        history.push(redirect_uri)
+        history.push(redirect_uri);
       })
       .catch((err) => {
         setError(err.message);
@@ -46,8 +44,7 @@ const Login = () => {
       });
   };
 
-
-  // Handle Github sign fucntion 
+  // Handle Github sign fucntion
   const handleGithubSignIn = () => {
     githubSignIn()
       .then((result) => {
@@ -61,7 +58,7 @@ const Login = () => {
       .finally(() => {
         setIsLoading(false);
       });
-  }
+  };
   // process login function
   const processLogin = () => {
     setIsLoading(true);
@@ -75,7 +72,7 @@ const Login = () => {
         if (err.message.includes("user-not-found")) {
           setError("Invalid Email and Password");
         } else {
-          setError(err.message)
+          setError(err.message);
         }
       })
       .finally(() => {

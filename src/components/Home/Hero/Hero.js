@@ -1,9 +1,9 @@
-import React from 'react';
-import "./Hero.css"
+import React from "react";
+import "./Hero.css";
 import useCounter from "../../../hooks/useCounter";
-import { imageArray } from '../../../utilities/utilities';
-import { Col, Container, Row } from 'react-bootstrap';
-// import {} 
+import { imageArray } from "../../../utilities/utilities";
+import { Col, Container, Row } from "react-bootstrap";
+// import {}
 
 const Hero = () => {
   /*
@@ -21,7 +21,6 @@ const Hero = () => {
     transition: "all 1.5s ease",
   };
 
-
   return (
     <div
       className="hero-banner container-fluid text-white"
@@ -31,7 +30,7 @@ const Hero = () => {
       <Container className="h-100">
         <Row className="h-100">
           {/* hero text  */}
-          <Col xs={12} md="10"  className="mx-auto h-100">
+          <Col xs={12} md="10" className="mx-auto h-100">
             <div className="h-100 d-flex flex-column justify-content-center align-align-items-center hero-text">
               <h2 className="display-4">
                 We Believe Everyone Should Have Easy Access To Great Dental Care
@@ -44,7 +43,9 @@ const Hero = () => {
               </p>
               <br />
               <div>
-                <button className="hero-btn btn-fill mb-3 mb-md-0">GET STARTED</button>
+                <button className="hero-btn btn-fill mb-3 mb-md-0">
+                  GET STARTED
+                </button>
                 <button className="hero-btn btn-unfill">CONTACT</button>
               </div>
             </div>
@@ -53,7 +54,6 @@ const Hero = () => {
       </Container>
     </div>
   );
-  
 };
 
 export default Hero;

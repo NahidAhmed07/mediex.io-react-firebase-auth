@@ -1,10 +1,10 @@
-import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import React from "react";
+import { Card, Col } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
-import "./Service.css"
+import "./Service.css";
 
-const Service = ({service}) => {
-  const {img, title, description, id}=service
+const Service = ({ service }) => {
+  const { img, title, description, id } = service;
   return (
     <Col className="mx-auto ms-3 ms-md-0">
       <Card

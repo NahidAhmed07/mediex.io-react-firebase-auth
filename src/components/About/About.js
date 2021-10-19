@@ -5,7 +5,6 @@ import { MdSlideshow } from "react-icons/md";
 import { useHistory } from "react-router";
 import Quote from "../Home/Quote/Quote";
 
-
 const About = () => {
   const [doctors, setDoctors] = useState([]);
   const history = useHistory();
@@ -46,7 +45,7 @@ const About = () => {
             </p>
           </Col>
         </Row>
-{/* about section part 2  */}
+        {/* about section part 2  */}
         <Row className="my-5 g-5 text-start">
           <Col sm={12} md={6}>
             <div className="overflow-hidden position-relative">
@@ -77,7 +76,7 @@ const About = () => {
             </div>
           </Col>
         </Row>
-{/* about doctor small cart section  */}
+        {/* about doctor small cart section  */}
         <Row className="g-5 my-5">
           <h6 className="text-muted fw-bold mt-4">OUR PROFESSOR</h6>
           <h3 className="my-4">
@@ -104,7 +103,7 @@ const About = () => {
         </Row>
       </Container>
       <Quote></Quote>
-{/* about accordion section start here  */}
+      {/* about accordion section start here  */}
       <Container className="my-5 text-start">
         <Row className="g-4">
           <Col sm={4}>

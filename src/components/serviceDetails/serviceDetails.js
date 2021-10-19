@@ -1,29 +1,26 @@
-import React,{useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { NavLink, useHistory } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import './ServiceDetails.css'
+import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();
   const [service, setService] = useState({});
   const history = useHistory();
-  
-useEffect(() => {
-  fetch(
-    "https://raw.githubusercontent.com/NahidAhmed07/api/main/assignment-10/services.json"
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      const findItem = data.find(service => service.id === serviceId);
-      if (findItem) {
-        setService(findItem);
-      }
-    });
-  
-}, []);
-  
-  
+
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/NahidAhmed07/api/main/assignment-10/services.json"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        const findItem = data.find((service) => service.id === serviceId);
+        if (findItem) {
+          setService(findItem);
+        }
+      });
+  }, []);
 
   return (
     <Container fluid id="service-details" className="pt-5">
@@ -47,7 +44,7 @@ useEffect(() => {
                 <button className="hero-btn btn-fill">Appointment</button>
               </NavLink>
               <button
-                // this function for back 1 step 
+                // this function for back 1 step
                 onClick={() => history.goBack()}
                 className="hero-btn btn-unfill"
               >

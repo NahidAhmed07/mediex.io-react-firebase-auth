@@ -5,7 +5,6 @@ import googleImg from "../../../images/login/google.png";
 import githubImg from "../../../images/login/github.png";
 import useAuth from "../../../hooks/useAuth";
 import { useHistory, useLocation } from "react-router";
-import { emptyInputField } from "../../../utilities/utilities";
 import { HashLink } from "react-router-hash-link";
 
 const Register = () => {
@@ -39,7 +38,6 @@ const Register = () => {
         logOutUser();
         history.push("/login");
         setError("");
-        emptyInputField();
       })
       .catch((err) => {
         if (err.message.includes("email-already-in-use")) {
@@ -82,7 +80,7 @@ const Register = () => {
     }
   };
 
-  // handle Google sign in function 
+  // handle Google sign in function
   const handleGoogleSignIn = () => {
     setIsLoading(true);
     googleSignIn()

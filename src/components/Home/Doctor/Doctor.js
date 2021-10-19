@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, Col } from 'react-bootstrap';
-import { HashLink } from 'react-router-hash-link';
+import React from "react";
+import { Card, Col } from "react-bootstrap";
+import { HashLink } from "react-router-hash-link";
 
 const Doctor = ({ doctor }) => {
   const { img, name, description, post, id } = doctor;
@@ -10,8 +10,13 @@ const Doctor = ({ doctor }) => {
         className="h-100 service-cart shadow-lg p-2"
         style={{ width: "18rem" }}
       >
-        <div className='overflow-hidden'>
-          <Card.Img className="animate-img" variant="top" style={{ height: "250px" }} src={img} />
+        <div className="overflow-hidden">
+          <Card.Img
+            className="animate-img"
+            variant="top"
+            style={{ height: "250px" }}
+            src={img}
+          />
         </div>
         <Card.Body>
           <h6 className="mt-3">{name}</h6>

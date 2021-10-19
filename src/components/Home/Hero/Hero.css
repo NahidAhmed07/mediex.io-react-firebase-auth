@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
 
-.hero-banner{
+.hero-banner {
   height: 100vh;
   background: #000000a2;
   background-position: center;
@@ -9,43 +9,39 @@
   background-blend-mode: overlay;
 }
 
-.hero-text h2{
+.hero-text h2 {
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   /* line-height: 50px; */
 }
 
-.hero-text p{
+.hero-text p {
   font-size: 18px;
   color: #e0e0e0a2;
   margin-top: 10px;
-  
 }
 
-.hero-btn{
+.hero-btn {
   padding: 10px 20px;
-  border: 2px solid #00AEEF ;
-  color: #00AEEF;
+  border: 2px solid #00aeef;
+  color: #00aeef;
   background: transparent;
   margin: 0 10px;
   font-weight: 500;
   transition: 0.4s;
   border-radius: 2px;
-
 }
-.btn-fill{
+.btn-fill {
   color: white;
-  background: #00AEEF;
-
+  background: #00aeef;
 }
 
-.btn-fill:hover{
-  color: #00AEEF;
+.btn-fill:hover {
+  color: #00aeef;
   background: transparent;
-  
 }
 
-.btn-unfill:hover{
+.btn-unfill:hover {
   color: white;
-  background: #00AEEF;
+  background: #00aeef;
 }

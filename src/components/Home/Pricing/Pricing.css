@@ -1,38 +1,34 @@
-
-
-.pricing-head{
+.pricing-head {
   padding: 15px 0;
   background: #537e28;
   color: white;
-  
 }
 
-
 .pricing-head h5 {
-  margin-bottom:0;
+  margin-bottom: 0;
   font-size: 30px;
   font-weight: bold;
 }
 
-.price-icon{
+.price-icon {
   font-size: 120px;
   margin: 20px auto;
   /* color: #A6C488; */
-  color: #04AFEF;
+  color: #04afef;
 }
 
-.price{
+.price {
   font-size: 40px;
   font-weight: 800;
 }
 
-.pricing-foot{
-   padding: 15px 0;
+.pricing-foot {
+  padding: 15px 0;
   background: #537e28;
   color: white;
   cursor: pointer;
 }
 
-.pricing-foot h5{
-margin-bottom: 0;
+.pricing-foot h5 {
+  margin-bottom: 0;
 }
