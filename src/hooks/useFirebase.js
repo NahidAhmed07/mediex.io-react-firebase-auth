@@ -43,10 +43,12 @@ const useFirebase = () => {
       if (user) {
         setUser(user)
         setIsLoading(false)
+        setError("")
       }
       else {
         setUser({})
         setIsLoading(false)
+        setError("")
       }
    })
     return () => unSubscribe;

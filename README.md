@@ -1,7 +1,7 @@
-# Education-Manage-system-Assignment-9
+# Hospital_Management_System_Midex-Assignment-10
 
 ## Live site link 
- [live site Link](https://education-assignment-9-nahid07.netlify.app/home)  : https://education-assignment-9-nahid07.netlify.app/home
+ [live site Link](https://mediex-assignment-10.web.app/)  : https://mediex-assignment-10.web.app/
 
 ## Available Scripts
 * React.js 
@@ -9,13 +9,28 @@
 * Html-5 and css-3
 * React-Router-Dom Api
 * Context Api 
-* Local Storage As DataBase.
+* Firebase Authentication system 
+* React-icon library
+* FontAwesome icon
+* Animate.css Animation library 
 
-## usses of This Website
-* This Website help you easily Chouse your Needed Courses.
-* Help tp you make a awesome Skilled person. 
-* And Make Your life Easy And Show Your Ceeriar Roadmap;
+## uses of This Website
+* This Website help you easily Search your needed doctor Appointment.
+* Help tp you Know Our Hospital services Details.
+* This project is using for medical health facilities.
+* you will find your every health problem solution.
+* Here you will also take your relevant health services package.
+* You can book your appointment from online.
+* Choose your Favorite doctors and check our facilities.
+* You may also take our services.
 
+
+##  useCounter  is my own Created Hook
+*useCounter hook is my own creation . this hook create for making hero section background images slider ...this hook return a counter state that update every 4 second . And this hook receive two parameter 
+  1. counter start index 
+  2. counter end index
+  background image change a simple array method this counter change the array index value then slider image is automatically change ... 
+  ####### happy Coding #########
 
 ## Nahid Ahmed (owner This Repo and This Website)
 * junior Web Developer in TEAM Rejected .

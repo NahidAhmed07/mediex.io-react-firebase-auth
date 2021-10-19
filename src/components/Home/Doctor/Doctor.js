@@ -10,7 +10,9 @@ const Doctor = ({ doctor }) => {
         className="h-100 service-cart shadow-lg p-2"
         style={{ width: "18rem" }}
       >
-        <Card.Img variant="top" style={{ height: "250px" }} src={img} />
+        <div className='overflow-hidden'>
+          <Card.Img className="animate-img" variant="top" style={{ height: "250px" }} src={img} />
+        </div>
         <Card.Body>
           <h6 className="mt-3">{name}</h6>
           <p className="fst-italic text-muted fw-bold">{post}</p>

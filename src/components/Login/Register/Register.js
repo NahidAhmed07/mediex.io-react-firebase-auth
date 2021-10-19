@@ -169,7 +169,7 @@ const Register = () => {
                       <i className="far fa-envelope-open text-primary"></i>
                     </InputGroup.Text>
                     <Form.Control
-                      onBlur={handleEmil}
+                      onChange={handleEmil}
                       id="email"
                       className="input-field"
                       type="email"

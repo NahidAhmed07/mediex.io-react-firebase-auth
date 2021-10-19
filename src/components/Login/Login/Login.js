@@ -36,7 +36,7 @@ const Login = () => {
       .then((result) => {
         setUser(result.user);
         setError("");
-        history.push(redirect_uri);
+        history.push(redirect_uri)
       })
       .catch((err) => {
         setError(err.message);
@@ -69,12 +69,13 @@ const Login = () => {
       .then((result) => {
         setUser(result.user);
         setError("");
-        emptyInputField();
         history.push(redirect_uri);
       })
       .catch((err) => {
         if (err.message.includes("user-not-found")) {
           setError("Invalid Email and Password");
+        } else {
+          setError(err.message)
         }
       })
       .finally(() => {
@@ -132,7 +133,7 @@ const Login = () => {
                       <i className="far fa-envelope-open text-primary"></i>
                     </InputGroup.Text>
                     <Form.Control
-                      onBlur={handleEmil}
+                      onChange={handleEmil}
                       className="input-field"
                       id="login-email"
                       type="email"
