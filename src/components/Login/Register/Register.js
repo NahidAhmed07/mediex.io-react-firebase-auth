@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
 import googleImg from "../../../images/login/google.png";
 import githubImg from "../../../images/login/github.png";
 import useAuth from "../../../hooks/useAuth";
@@ -162,6 +161,7 @@ const Register = () => {
                   </InputGroup>
                 </Form.Group>
                 <br />
+                {/* email field */}
                 <Form.Group controlId="validationCustomUsername">
                   <Form.Label>Your Email</Form.Label>
                   <InputGroup hasValidation>
@@ -180,6 +180,7 @@ const Register = () => {
                   </InputGroup>
                 </Form.Group>
                 <br />
+                {/* password field  */}
                 <Form.Group controlId="validationCustomUsername">
                   <Form.Label>Password</Form.Label>
                   <InputGroup hasValidation>

@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 import { useState } from "react";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
-import { NavLink, useLocation, useHistory } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import googleImg from "../../../images/login/google.png"
 import githubImg from "../../../images/login/github.png";
 import useAuth from "../../../hooks/useAuth";

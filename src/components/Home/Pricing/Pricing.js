@@ -22,6 +22,7 @@ const Pricing = () => {
               <Card.Title className="pricing-head">
                 <h5>GOLD PLAN</h5>
               </Card.Title>
+              {/* this icon from react icon library */}
               <AiOutlineGold className="price-icon"></AiOutlineGold>
               <Card.Body>
                 <Card.Text>
@@ -44,6 +45,7 @@ const Pricing = () => {
               <Card.Title className="pricing-head">
                 <h5>SMART PLAN</h5>
               </Card.Title>
+              {/* this icon from react icon library */}
               <SiSmartthings className="price-icon"></SiSmartthings>
               <Card.Body>
                 <Card.Text>
@@ -66,6 +68,7 @@ const Pricing = () => {
               <Card.Title className="pricing-head">
                 <h5>BASIC PLAN</h5>
               </Card.Title>
+              {/* this icon from react icon library */}
               <AiOutlineInsertRowBelow className="price-icon"></AiOutlineInsertRowBelow>
               <Card.Body>
                 <Card.Text>

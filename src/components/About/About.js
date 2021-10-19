@@ -20,6 +20,7 @@ const About = () => {
 
   return (
     <Container fluid id="about" className="">
+      {/* about header starat  */}
       <div className="about pt-5 text-white">
         <div>
           <h1 className="display-3 fw-bold">About Us</h1>
@@ -27,6 +28,7 @@ const About = () => {
         </div>
       </div>
       <Container>
+        {/* aboout section part 1  */}
         <Row className="my-5 text-start">
           <Col sm={12} md={6}>
             <h6 className="text-muted">WELCOME TO MEDICHECK.</h6>
@@ -44,8 +46,8 @@ const About = () => {
             </p>
           </Col>
         </Row>
-
-        <Row className="my-5 g-2 g-md-4 g-lg-5 text-start">
+{/* about section part 2  */}
+        <Row className="my-5 g-5 text-start">
           <Col sm={12} md={6}>
             <div className="overflow-hidden position-relative">
               <img
@@ -75,7 +77,7 @@ const About = () => {
             </div>
           </Col>
         </Row>
-
+{/* about doctor small cart section  */}
         <Row className="g-5 my-5">
           <h6 className="text-muted fw-bold mt-4">OUR PROFESSOR</h6>
           <h3 className="my-4">
@@ -84,7 +86,7 @@ const About = () => {
           </h3>{" "}
           <hr />
           {doctors.map((doctor) => (
-            <Col sm={12} md={6} lg={4}>
+            <Col sm={12} md={6} lg={4} key={doctor.id}>
               <div
                 onClick={() =>
                   history.push(`/doctorDetails/${doctor.id}#doctor-details`)
@@ -102,7 +104,7 @@ const About = () => {
         </Row>
       </Container>
       <Quote></Quote>
-
+{/* about accordion section start here  */}
       <Container className="my-5 text-start">
         <Row className="g-4">
           <Col sm={4}>

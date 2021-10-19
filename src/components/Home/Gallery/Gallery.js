@@ -11,7 +11,7 @@ const Gallery = () => {
       <Row sm={1} md={2} lg={3} xl={3} className="text-start g-4 my-5">
         <Col xs={12} md={6} lg={4}>
           <div className="py-4">
-            <h6 className="text-muted">PHOTO GALERY</h6>
+            <h6 className="text-muted">PHOTO GALERE</h6>
 
             <h2 className="header-text display-6 fw-bold">
               Have A Nice Look Inside Our{" "}
@@ -19,10 +19,11 @@ const Gallery = () => {
             </h2>
 
             <h6>
-              <a href="#">View All Gallery</a>
+              <a href="/home">View All Gallery</a>
             </h6>
           </div>
         </Col>
+        {/* gallery single image column  */}
         <Col xs={12} md={6} lg={4}>
           <div className="position-relative">
             <img
@@ -38,6 +39,8 @@ const Gallery = () => {
             </div>
           </div>
         </Col>
+        {/* gallery single image column  */}
+
         <Col xs={12} md={6} lg={4}>
           <div className="position-relative">
             <img
@@ -54,6 +57,8 @@ const Gallery = () => {
             </div>
           </div>
         </Col>
+        {/* gallery single image column  */}
+
         <Col xs={12} md={6} lg={4}>
           <div className="position-relative">
             <img
@@ -69,6 +74,7 @@ const Gallery = () => {
             </div>
           </div>
         </Col>
+        {/* gallery single image column  */}
         <Col xs={12} md={6} lg={4}>
           <div className="position-relative">
             <img
@@ -84,6 +90,7 @@ const Gallery = () => {
             </div>
           </div>
         </Col>
+        {/* gallery single image column  */}
         <Col xs={12} md={6} lg={4}>
           <div className="position-relative">
             <img

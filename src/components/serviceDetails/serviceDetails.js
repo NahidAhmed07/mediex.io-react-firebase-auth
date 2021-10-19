@@ -6,9 +6,7 @@ import './ServiceDetails.css'
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();
-
   const [service, setService] = useState({});
-
   const history = useHistory();
   
 useEffect(() => {
@@ -22,7 +20,10 @@ useEffect(() => {
         setService(findItem);
       }
     });
+  
 }, []);
+  
+  
 
   return (
     <Container fluid id="service-details" className="pt-5">
@@ -46,6 +47,7 @@ useEffect(() => {
                 <button className="hero-btn btn-fill">Appointment</button>
               </NavLink>
               <button
+                // this function for back 1 step 
                 onClick={() => history.goBack()}
                 className="hero-btn btn-unfill"
               >

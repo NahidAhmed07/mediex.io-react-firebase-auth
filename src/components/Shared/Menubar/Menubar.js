@@ -1,14 +1,13 @@
 import React from "react";
 import "./Menubar.css";
 import { Nav, Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
 import logo from "../../../images/logo.png";
 import useAuth from "../../../hooks/useAuth";
 import { HashLink } from "react-router-hash-link";
 
 const Menubar = () => {
 
-  const { logOutUser, user } = useAuth();
+  const { logOutUser, user } = useAuth(); 
   
   return (
     <Navbar
@@ -26,7 +25,6 @@ const Menubar = () => {
           {/* Nav Rout link  */}
           <HashLink
             className="nav-item"
-            activeClassName="active-nav-item"
             to="/home#home"
           >
             Home
@@ -34,30 +32,29 @@ const Menubar = () => {
 
           <HashLink
             className="nav-item"
-            activeClassName="active-nav-item"
             to="/home#service"
           >
             Services
           </HashLink>
           <HashLink
             className="nav-item"
-            activeClassName="active-nav-item"
             to="/appointment#appointment"
           >
             Appointment
           </HashLink>
           <HashLink
             className="nav-item"
-            activeClassName="active-nav-item"
             to="/about#about"
           >
             About
           </HashLink>
           
         </Nav>
-        <div className="d-flex align-items-center ms-auto my-4 my-md-0">
-          <h6 className="me-3 fw-bold">{user.displayName}</h6>
+        <div className="d-flex align-items-center ms-auto my-4 my-md-0 nav-login">
+          <h6 className="me-3 mt-1 fw-bold">{user.displayName}</h6>
 
+          
+          {/* login and logout toggle render  */}
           {!user.displayName ? (
             <HashLink to="/login#login">
               <button className="hero-btn btn-fill">Login</button>

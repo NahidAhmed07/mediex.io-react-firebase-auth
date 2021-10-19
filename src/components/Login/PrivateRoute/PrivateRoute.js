@@ -4,7 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
   const { user, isLoading } = useAuth();
-  
+  // this is a loading spinner for get data form server 
   if (isLoading) {
     return (
       <div className="my-5">

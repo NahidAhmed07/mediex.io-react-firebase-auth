@@ -5,16 +5,17 @@
   text-decoration: none;
   color: rgb(58, 58, 58);
   font-weight: 600;
-  margin-right: 10px;
+  margin-right: 5px;
   padding: 14px 12px;
-  margin: 10px 8px;
+  margin: 10px 5px;
 
 }
 .nav-item:hover{
  color: #555555;
 }
-.active-nav-item{
-  color: #1b1b1b;
-}
 
+.nav-login{
+  border-left: 1px solid #bbbbbb;
+  padding-left: 5px;
+}
 

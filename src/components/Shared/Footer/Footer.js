@@ -1,10 +1,11 @@
-import React from 'react';
-import { Container, Row, Col } from "react-bootstrap"
-import './Footer.css';
-import { NavLink } from "react-router-dom"
-import {FaRegCalendarAlt} from "react-icons/fa"
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "./Footer.css";
+import { NavLink } from "react-router-dom";
+import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
-import { footerImages } from '../../../utilities/utilities';
+import { footerImages } from "../../../utilities/utilities";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -46,6 +47,7 @@ const Footer = () => {
             </ul>
           </Col>
           <Col>
+            {/* post single items  */}
             <h5>Recent Post</h5>
             <hr />
             <br />
@@ -65,6 +67,7 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
+              {/* post single items  */}
               <div className="d-flex gap-4 align-items-center my-4 post-item">
                 <img
                   className="circle-img"
@@ -80,6 +83,7 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
+              {/* post single items  */}
               <div className="d-flex gap-4 align-items-center post-item ">
                 <img
                   className="circle-img"
@@ -101,7 +105,7 @@ const Footer = () => {
             <h5>Photo Gallery</h5>
             <hr />
             <br />
-
+            {/* footer mini photo gallery  */}
             <Row xs={2} md={3} className="g-3">
               {footerImages.map((img) => (
                 <Col key={img.slice(0.2)}>
@@ -116,9 +120,9 @@ const Footer = () => {
         <br />
         <hr />
         <p className="text-center">
-          <a href="#hero">
+          <HashLink to="home#home">
             <MdOutlineKeyboardArrowUp className="up-icon" />
-          </a>
+          </HashLink>
         </p>
 
         <p className="text-center">

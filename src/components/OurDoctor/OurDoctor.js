@@ -24,6 +24,7 @@ const OurDoctor = () => {
         of experiences.
       </p><br />
       <hr />
+      {/* doctor array map for creating single doctor cart  */}
       <Row className="py-5 g-4">
         {doctors.map((doctor) => (
           <Doctor key={doctor.id} doctor={doctor}></Doctor>

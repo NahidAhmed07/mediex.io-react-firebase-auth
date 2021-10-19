@@ -7,6 +7,7 @@ const Quote = () => {
     <Container fluid className="quote">
       <Container>
         <Row >
+          {/* quote section  */}
           <Col sm={12} lg={10} xl={9} className="mx-auto py-5">
             <div className="py-5">
               <h6 className="mb-3">GET A QUOTE</h6>
