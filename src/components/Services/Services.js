@@ -4,9 +4,6 @@ import Service from '../Service/Service';
 
 const Services = () => {
   const [services, setServices] = useState([])
-  
-
-
 
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/NahidAhmed07/api/main/assignment-10/services.json"
@@ -15,11 +12,14 @@ const Services = () => {
   }, [])
   
   return (
-    <Container fluid>
+    <Container fluid id="service" className="pt-5">
       <Container className="my-5">
-        <h2 className="header-text display-5 fst-italic fw-bold pt-5">
-          OUR SERVICES
-        </h2>
+        <h2 className="header-text display-6  fw-bold pt-5">OUR SERVICES</h2>
+        <br />
+        <p className="fst-italic text-muted">
+          We are always keen on supporting art production and digital services
+          to provide the customers with added value that{" "}
+        </p><br />
         <hr />
         <Row
           xs={1}

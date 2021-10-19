@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import Doctor from "../Home/Doctor/Doctor";
 // Import Swiper React components
@@ -15,18 +15,20 @@ const OurDoctor = () => {
   }, [])
   
   return (
-    <Container>
-      
-      <h2 className="header-text display-5 fst-italic fw-bold pt-5">OUR DOCTOR</h2><hr />
+    <Container className="my-5">
+      <h2 className="header-text display-6 fw-bold pt-5">
+        OUR DOCTOR
+      </h2><br />
+      <p className="text-muted lead fst-italic">
+        Our doctors are specialized in their field and have more than 10 years
+        of experiences.
+      </p><br />
+      <hr />
       <Row className="py-5 g-4">
-        {
-          doctors.map(doctor => <Doctor
-            key={doctor.id}
-            doctor={doctor}
-          ></Doctor>)
-        }
+        {doctors.map((doctor) => (
+          <Doctor key={doctor.id} doctor={doctor}></Doctor>
+        ))}
       </Row>
-
     </Container>
   );
 };

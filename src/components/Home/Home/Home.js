@@ -9,7 +9,7 @@ import Quote from '../Quote/Quote';
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <Hero></Hero>
       <Services></Services>
       <Quote></Quote>

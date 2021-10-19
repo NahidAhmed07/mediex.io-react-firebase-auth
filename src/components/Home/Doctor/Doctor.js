@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Doctor = ({ doctor }) => {
   const { img, name, description, post, id } = doctor;
@@ -19,9 +20,9 @@ const Doctor = ({ doctor }) => {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <NavLink to="/doctorDetails">
+          <HashLink to={`/doctorDetails/${id}#doctor-details`}>
             <button className="hero-btn btn-unfill">Details</button>
-          </NavLink>
+          </HashLink>
         </Card.Footer>
       </Card>
     </Col>

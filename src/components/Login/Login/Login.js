@@ -7,6 +7,7 @@ import googleImg from "../../../images/login/google.png"
 import githubImg from "../../../images/login/github.png";
 import useAuth from "../../../hooks/useAuth";
 import { emptyInputField } from "../../../utilities/utilities";
+import { HashLink } from "react-router-hash-link";
 
 const Login = () => {
   const [showState, setShowState] = useState(false);
@@ -16,6 +17,7 @@ const Login = () => {
   const history = useHistory();
 
   const redirect_uri = location?.state?.from || "/";
+
   const {
     googleSignIn,
     loginWithEmail,
@@ -28,6 +30,7 @@ const Login = () => {
 
   // handle google signIn function
   const handleGoogleSignIn = () => {
+    
     setIsLoading(true);
     googleSignIn()
       .then((result) => {
@@ -97,7 +100,7 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-home">
+    <div className="auth-home pt-5" id="login">
       <Container>
         <Row>
           <Col xs={12} md={6} lg={6} xl={5} className="mx-auto">
@@ -179,7 +182,7 @@ const Login = () => {
 
                 <p className="text-center mt-5">
                   Are You New ?{" "}
-                  <NavLink to="/register">Rlease Register</NavLink>
+                  <HashLink to="/register#register">Rlease Register</HashLink>
                 </p>
               </Form>
             </div>

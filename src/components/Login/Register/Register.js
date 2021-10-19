@@ -7,6 +7,7 @@ import githubImg from "../../../images/login/github.png";
 import useAuth from "../../../hooks/useAuth";
 import { useHistory, useLocation } from "react-router";
 import { emptyInputField } from "../../../utilities/utilities";
+import { HashLink } from "react-router-hash-link";
 
 const Register = () => {
   const [showState, setShowState] = useState(false);
@@ -117,7 +118,7 @@ const Register = () => {
   };
 
   return (
-    <div className="auth-home">
+    <div className="auth-home pt-5" id="register">
       <Container>
         <Row>
           <Col xs={12} md={6} lg={6} xl={5} className="mx-auto">
@@ -216,7 +217,7 @@ const Register = () => {
 
                 <p className="text-center mt-5">
                   Already Have An Account ?
-                  <NavLink to="/login">Please Login</NavLink>
+                  <HashLink to="/login#login">Please Login</HashLink>
                 </p>
               </Form>
             </div>
