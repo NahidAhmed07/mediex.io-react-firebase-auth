@@ -42,25 +42,18 @@ const Menubar = () => {
           <HashLink
             className="nav-item"
             activeClassName="active-nav-item"
-            to="/appointment"
+            to="/appointment#appointment"
           >
             Appointment
           </HashLink>
-          <NavLink
+          <HashLink
             className="nav-item"
             activeClassName="active-nav-item"
-            to="/contact"
+            to="/about#about"
           >
             About
-          </NavLink>
-          <NavLink
-            className="nav-item d-md-none "
-            activeClassName="active-nav-item"
-            to="/cart"
-          >
-            VIEW
-          </NavLink>
-          {/* navbar icons  */}
+          </HashLink>
+          
         </Nav>
         <div className="d-flex align-items-center ms-auto my-4 my-md-0">
           <h6 className="me-3 fw-bold">{user.displayName}</h6>

@@ -4,7 +4,7 @@ import "./Appointment.css"
 
 const Appointment = () => {
   return (
-    <Container fluid id="appointment" className="text-start">
+    <Container fluid id="appointment" className="text-start pt-5">
       <Container>
         <Row>
           <Col sm={12} lg={8}>
@@ -19,7 +19,7 @@ const Appointment = () => {
               <Col sm={12} md={6}>
                 <input
                   type="text"
-                  className="form-control input-field"
+                  className="form-control input-fields"
                   id="name"
                   placeholder="Your Name *"
                 ></input>
@@ -27,7 +27,7 @@ const Appointment = () => {
               <Col sm={12} md={6}>
                 <input
                   type="email"
-                  className="form-control input-field"
+                  className="form-control input-fields"
                   id="email"
                   placeholder="Your Email *"
                 ></input>
@@ -35,14 +35,14 @@ const Appointment = () => {
               <Col sm={12}>
                 <input
                   type="text"
-                  className="form-control input-field"
+                  className="form-control input-fields"
                   id="name"
                   placeholder="Subfect You Like *"
                 ></input>
               </Col>
               <Col sm={12}>
                 <textarea
-                  className="form-control input-field"
+                  className="form-control input-fields"
                   rows="4"
                   placeholder="Write Your message *"
                 ></textarea>

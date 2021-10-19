@@ -13,6 +13,7 @@ import DoctorDetails from "./components/DoctorDetails/DoctorDetails";
 import Services from "./components/Services/Services";
 import NotFound from "./components/NotFound/NotFound";
 import Appointment from "./components/Appointment/Appointment";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -40,13 +41,16 @@ function App() {
               <DoctorDetails></DoctorDetails>
             </PrivateRoute>
 
-            <PrivateRoute path="serviceDetails/:serviceId">
+            <PrivateRoute path="/serviceDetails/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
 
             <PrivateRoute path="/appointment">
               <Appointment></Appointment>
             </PrivateRoute>
+            <Route path="/about">
+              <About></About>
+            </Route>
 
             <Route path="*">
               <NotFound></NotFound>
