@@ -23,7 +23,7 @@ const Footer = () => {
                 &#62; Setting &amp; Privacy
               </li>
               <li as={NavLink} to="/">
-                &#62; Make Appointment
+                &#62; Appointment
               </li>
               <li as={NavLink} to="/">
                 &#62; Faq

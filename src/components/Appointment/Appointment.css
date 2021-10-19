@@ -1,0 +1,17 @@
+
+
+#appointment{
+  
+  background-image: url("https://www.devsnews.com/wp/medicheck/wp-content/uploads/2020/04/form-bg-1.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-color:rgba(0, 0, 0, 0.514);
+  background-blend-mode: overlay;
+
+}
+
+.input-field{
+  margin: 20px 0;
+  padding: 20px 10px;
+}

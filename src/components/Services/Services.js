@@ -22,10 +22,6 @@ const Services = () => {
         </p><br />
         <hr />
         <Row
-          xs={1}
-          md={2}
-          lg={3}
-          xl={4}
           className="py-5 text-start mx-auto g-4"
         >
           {services.map((service) => (

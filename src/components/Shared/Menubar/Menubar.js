@@ -45,7 +45,7 @@ const Menubar = () => {
           <NavLink
             className="nav-item"
             activeClassName="active-nav-item"
-            to="/about"
+            to="/appointment#appointment"
           >
             Appointment
           </NavLink>
