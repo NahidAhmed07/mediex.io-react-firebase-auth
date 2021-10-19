@@ -12,16 +12,13 @@ const Menubar = () => {
   
   return (
     <Navbar
+      id='navbar'
       className="container-fluid sticky-top bg-white px-5 py-0 navbar"
       variant="light"
       expand="lg"
     >
       <Navbar.Brand href="#">
-        <img
-          height="40"
-          src={logo}
-          alt=""
-        />
+        <img height="40" src={logo} alt="" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
@@ -42,13 +39,13 @@ const Menubar = () => {
           >
             Services
           </HashLink>
-          <NavLink
+          <HashLink
             className="nav-item"
             activeClassName="active-nav-item"
-            to="/appointment#appointment"
+            to="/appointment"
           >
             Appointment
-          </NavLink>
+          </HashLink>
           <NavLink
             className="nav-item"
             activeClassName="active-nav-item"
